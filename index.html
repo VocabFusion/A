@@ -8,15 +8,19 @@
 </head>
 <body>
     <div class="container">
-        <h1>Vocabulary Enhancer</h1>
-        
-        <!-- Activity selection buttons -->
-        <div id="activity-buttons">
+        <!-- Introduction Section -->
+        <div id="intro-container">
+            <h1>Welcome to the Vocabulary Enhancer!</h1>
+            <p id="intro-text">Welcome to the outside world!</p>
+        </div>
+
+        <!-- Activity selection buttons (Initially hidden) -->
+        <div id="activity-buttons" style="display: none;">
             <button id="vocabulary-button" onclick="switchActivity('vocabulary')">Vocabulary Quiz</button>
             <button id="prefix-suffix-button" onclick="switchActivity('prefix-suffix')">Prefix/Suffix Quiz</button>
             <button id="flashcards-button" onclick="switchActivity('flashcards')">Flashcards</button>
         </div>
-        
+
         <!-- Flashcards container (Initially hidden) -->
         <div id="flashcards-container" style="display: none;">
             <div id="flashcard" class="flashcard">
