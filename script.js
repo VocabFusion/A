@@ -62,6 +62,15 @@ let currentFlashcardIndex = 0;
 let correctAnswersCount = 0;
 let currentQuiz = 'vocabulary'; // Tracks which quiz is currently active
 
+// Show the introduction and hide the activities section
+function showIntro() {
+    setTimeout(() => {
+        // After 5 seconds, hide intro text and show activity buttons
+        document.getElementById('intro-container').style.display = 'none';
+        document.getElementById('activity-buttons').style.display = 'block';  // Show the activity buttons
+    }, 5000); // 5 seconds delay
+}
+
 // Switch between activities (vocabulary, prefix-suffix, and flashcards)
 function switchActivity(activity) {
     currentQuiz = activity;
@@ -205,5 +214,5 @@ function showFlashcardScore() {
     document.getElementById('activity-buttons').style.display = 'block';
 }
 
-// Initialize with the vocabulary quiz
-switchActivity('vocabulary');
+// Initialize the introduction screen
+showIntro();
