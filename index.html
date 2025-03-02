@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocabulary Enhancer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Vocabulary Enhancer</h1>
+        
+        <!-- Activity selection buttons -->
+        <div id="activity-buttons">
+            <button id="vocabulary-button" onclick="switchActivity('vocabulary')">Vocabulary Quiz</button>
+            <button id="prefix-suffix-button" onclick="switchActivity('prefix-suffix')">Prefix/Suffix Quiz</button>
+            <button id="flashcards-button" onclick="switchActivity('flashcards')">Flashcards</button>
+        </div>
+        
+        <!-- Flashcards container (Initially hidden) -->
+        <div id="flashcards-container" style="display: none;">
+            <div id="flashcard" class="flashcard">
+                <p id="flashcard-content"></p>
+            </div>
+            <input type="text" id="flashcard-answer" placeholder="Type your answer here">
+            <button id="submit-answer" onclick="submitFlashcardAnswer()">Submit</button>
+            <div id="flashcard-feedback"></div>
+            <button id="next-card-button" onclick="nextFlashcard()" style="display: none;">Next Card</button>
+        </div>
+
+        <!-- Question and Answer container (Initially hidden) -->
+        <div id="question-container" style="display: none;">
+            <p id="question"></p>
+            <div id="answer-container"></div>
+        </div>
+        <div id="feedback"></div>
+        <button id="next-button" onclick="nextQuestion()" style="display: none;">Next Question</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
